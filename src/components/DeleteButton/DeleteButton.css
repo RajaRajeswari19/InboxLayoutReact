@@ -1,0 +1,9 @@
+.delete-icon {
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.delete-icon:hover {
+  color: #922b21;
+}

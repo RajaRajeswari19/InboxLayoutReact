@@ -1,0 +1,19 @@
+.edit-icon {
+  background-color: #5bc0de;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.edit-icon i {
+  font-size: 18px;
+}
+
+.edit-icon:hover {
+  background-color: #4aa8c4;
+}
