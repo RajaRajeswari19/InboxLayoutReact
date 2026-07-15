@@ -12,6 +12,7 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
 
   const [searchText, setSearchText] = useState("");
   const debouncedSearch = useDebounce(searchText, 400);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     console.log("Loading data...");
@@ -20,6 +21,7 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
 
   const loadData = async () => {
     try {
+      setLoading(true);
       const response = await getEmails();
 
       const data =
@@ -29,6 +31,8 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
       setEmails(data);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -57,6 +61,15 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
     }
   };
 
+    if (loading) {
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+  
   const filteredEmails = emails.filter((item) => {
     const search = debouncedSearch.toLowerCase();
 
