@@ -53,7 +53,9 @@ function Login() {
                     <input type="text" value={emailOrPhone} onChange={(e) => setEmailOrPhone(e.target.value)} />
                     <label>Password</label>
                     <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                    <p style={{ color: "#07889c", cursor: "pointer", marginTop: 0, marginBottom: 20 }}> Forgot Password? </p>
+                    <p style={{ color: "#07889c", cursor: "pointer", marginTop: 0, marginBottom: 20 }}>
+                        <span onClick={() => navigate("/forgotpassword")}> Forgot Password? </span>
+                    </p>
 
                     <button onClick={handleLogin} style={{ fontSize:14, fontWeight:"bold" }}> LOGIN </button>
 
