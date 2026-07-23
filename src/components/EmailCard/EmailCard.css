@@ -39,18 +39,22 @@
 
 .card-body {
   margin-top: 15px;
-
   color: #555;
-
   line-height: 1.5;
   font-size: 13px;
-
   min-height: 70px;
+}
+
+.card-subject {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: #333;
 }
 
 .card-footer {
   margin-top: 20px;
-
   display: flex;
   justify-content: flex-end;
 }

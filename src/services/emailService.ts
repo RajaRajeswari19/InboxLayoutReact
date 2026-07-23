@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const API_URL ="https://6a48b029a033dcb98d64cc52.mockapi.io/api/layout/comments";
+// const API_URL = "http://localhost:5000/api/emails";
 
 export const getEmails = async () => {
   const response = await axios.get(API_URL);
@@ -11,6 +12,7 @@ export const createEmail = async (
   emailData: {
     name: string;
     email: string;
+    subject?: string;
     body: string;
   }
 ) => {

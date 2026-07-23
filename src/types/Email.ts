@@ -1,7 +1,10 @@
+import type { ReactNode } from "react";
+
 export interface Email {
   id: string;
   name: string;
   email: string;
+  subject?: string;
   body: string;
   isDeleted: boolean;
 }
@@ -47,4 +50,19 @@ export interface MainGridLayoutProps {
 export interface SearchBarProps {
   searchText: string;
   onSearchChange: (value: string) => void;
+}
+
+export interface PortalProps {
+  children: ReactNode;
+  targetId?: string;
+}
+
+export interface UserInfoProps {
+  name: string;
+  email: string;
+}
+
+export interface LoginProps{
+  onLogin: () => void;
+  onSignup: () => void;
 }

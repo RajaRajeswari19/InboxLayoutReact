@@ -19,7 +19,10 @@ function EmailCard({email,onDelete}: Props) {
         </div>
       </div>
 
-      <p className="card-body">{email.body}</p>
+      <h5 className="card-subject">{email.subject}</h5>
+      <p className="card-body" style={{ marginTop: "8px" }}>
+        {email.body}
+      </p>
 
       <div className="card-footer">
         <DeleteButton onClick={() => onDelete(email.id)}/>

@@ -75,7 +75,7 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
 
     return (item.name.toLowerCase().includes(search) ||
       item.email.toLowerCase().includes(search) ||
-      item.body.toLowerCase().includes(search)
+      item.body.toLowerCase().includes(search) 
     );
   });
 
@@ -84,7 +84,7 @@ function MainGridLayout({ activeTab, refreshFlag, }: MainGridLayoutProps) {
       <SearchBar searchText={searchText} onSearchChange={setSearchText} />
 
       <div className="grid-container">
-        {filteredEmails.length === 0 ? (<h3>No Records Found</h3>) :
+        {filteredEmails.length === 0 ? (<h3>No Records Found!!!</h3>) :
           (filteredEmails.map((item) => (
             <EmailCard key={item.id} email={item} onDelete={handleDelete}
             />

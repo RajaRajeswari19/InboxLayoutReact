@@ -36,7 +36,9 @@ function Header({ activeTab, onTabChange, onRefresh, onSaveSuccess,}: HeaderProp
         </div>
 
         <div className="header-right">
-          <UserInfo name="Raja Rajeswari" email="rajarajeswari.venkatesan@ideas2it.com"/>
+          {/* <UserInfo name="Raja Rajeswari" email="rajarajeswari.venkatesan@ideas2it.com"/> */}
+          <UserInfo name = {sessionStorage.getItem("name")||"Raja Rajeswari"} 
+            email={sessionStorage.getItem("emailId")|| "rajarajeswari.venkatesan@ideas2it.com"}></UserInfo>
         </div>
       </header>
 

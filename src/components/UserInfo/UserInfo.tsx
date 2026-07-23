@@ -1,9 +1,5 @@
 import "./UserInfo.css";
-
-interface UserInfoProps {
-  name: string;
-  email: string;
-}
+import type {UserInfoProps} from "../../types/Email"
 
 function UserInfo({ name, email }: UserInfoProps) {
   return (
